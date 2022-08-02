@@ -12,6 +12,16 @@ namespace WebApi
             // Add services to the container.
             builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("EmployeeConnStr")));
 
+            builder.Services.AddCors(o => o.AddPolicy("CorsPolicy", builder =>
+            {
+                builder.AllowAnyMethod()
+                .AllowAnyHeader()
+                .AllowCredentials()
+                .WithOrigins("http://localhost:4200");
+            }));
+
+            builder.Services.AddSignalR();
+
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
@@ -30,6 +40,12 @@ namespace WebApi
 
             app.UseAuthorization();
 
+            app.UseCors("CorsPolicy");
+
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapHub<BroadcastHub>("/notify");
+            });
 
             app.MapControllers();
 
