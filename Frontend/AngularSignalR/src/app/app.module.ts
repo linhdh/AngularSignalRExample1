@@ -8,6 +8,7 @@ import { EmployeeEditComponent } from './employee/employee-edit/employee-edit.co
 import { EmployeeDetailComponent } from './employee/employee-detail/employee-detail.component';
 import { ModalComponent } from './modal/modal.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { NavMenuComponent } from './nav-menu/nav-menu.component';
     EmployeeEditComponent,
     EmployeeDetailComponent,
     ModalComponent,
-    NavMenuComponent
+    NavMenuComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
