@@ -29,7 +29,7 @@ export class EmployeeListComponent implements OnInit {
   performFilter(filterBy: string): Employee[] {  
     filterBy = filterBy.toLocaleLowerCase();  
     return this.employees.filter((employee: Employee) =>  
-      employee.name.toLocaleLowerCase().indexOf(filterBy) !== -1);  
+      employee.name?.toLocaleLowerCase().indexOf(filterBy) !== -1);  
   }
 
   ngOnInit(): void {

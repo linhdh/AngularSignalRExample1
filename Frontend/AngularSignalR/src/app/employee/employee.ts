@@ -1,9 +1,9 @@
 export interface Employee {
-    id: string;
-    name: string; 
-    address: string; 
-    gender: string;
-    company: string;
-    designation: string;
-    cityname: string;
+    id: string | null;
+    name: string | null; 
+    address: string | null; 
+    gender: string | null;
+    company: string | null;
+    designation: string | null;
+    cityname: string | null;
 }

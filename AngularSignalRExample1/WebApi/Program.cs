@@ -38,9 +38,11 @@ namespace WebApi
 
             app.UseHttpsRedirection();
 
-            app.UseAuthorization();
-
             app.UseCors("CorsPolicy");
+
+            app.UseRouting();
+
+            app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
