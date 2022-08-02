@@ -1,7 +1,0 @@
-{
-  "dependencies": {
-    "@microsoft/signalr": "^6.0.7",
-    "bootstrap": "^5.2.0",
-    "font-awesome": "^4.7.0"
-  }
-}
