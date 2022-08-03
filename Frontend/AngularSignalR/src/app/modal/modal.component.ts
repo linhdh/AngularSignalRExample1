@@ -22,7 +22,7 @@ export class ModalComponent implements OnInit, OnDestroy {
   
     document.body.appendChild(this.element);  
   
-    this.element.addEventListener('click', el => {  
+    this.element.addEventListener('click', (el: any) => {  
       if (el.target.className === 'app-modal') {  
         this.close();  
       }  

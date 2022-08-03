@@ -69,13 +69,13 @@ export class EmployeeService {
 
   private initializeEmployee(): Employee {
     return {
-      id: null, 
-      name: null, 
-      address: null, 
-      gender: null, 
-      company: null, 
-      designation: null, 
-      cityname: null
+      id: '', 
+      name: '', 
+      address: '', 
+      gender: '', 
+      company: '', 
+      designation: '', 
+      cityname: ''
     };
   }
 }

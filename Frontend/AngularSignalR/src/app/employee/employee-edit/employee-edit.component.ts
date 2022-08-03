@@ -13,9 +13,9 @@ import { EmployeeService } from '../employee.service';
 export class EmployeeEditComponent implements OnInit, OnDestroy {
   @ViewChildren(FormControlName, { read: ElementRef }) formInputElements: ElementRef[];  
   pageTitle = 'Employee Edit';  
-  errorMessage: string;  
+  errorMessage: string = '';  
   employeeForm: FormGroup;  
-  tranMode: string;  
+  tranMode: string = '';  
   employee: Employee;  
   private sub: Subscription;
 
@@ -60,7 +60,8 @@ export class EmployeeEditComponent implements OnInit, OnDestroy {
           const employee: Employee = { id: "0", name: "", address: "", gender: "", company: "", designation: "", cityname: "" };  
           this.displayEmployee(employee);  
         }  
-        else {  
+        else if (id)
+        {  
           this.getEmployee(id);  
         }  
       }  

@@ -14,9 +14,10 @@ export class NavMenuComponent implements OnInit {
   notification: NotificationCountResult;  
   messages: Array<NotificationResult>;  
   errorMessage = '';
+  isExpanded: boolean;
 
   constructor(private notificationService: NotificationService, private modalService: ModalService) { 
-    isExpanded = false;
+    this.isExpanded = false;
   }
 
   ngOnInit(): void {

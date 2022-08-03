@@ -17,9 +17,9 @@
                    type="text"    
                    placeholder="Name (required)"    
                    formControlName="name"    
-                   [ngClass]="{'is-invalid': displayMessage.name }" />    
+                   [ngClass]="{'is-invalid': displayMessage['name'] }" />    
             <span class="invalid-feedback">    
-              {{displayMessage.name}}    
+              {{displayMessage['name']}}    
             </span>    
           </div>    
         </div>    
@@ -33,9 +33,9 @@
                    type="text"    
                    placeholder="Cityname (required)"    
                    formControlName="cityname"    
-                   [ngClass]="{'is-invalid': displayMessage.cityname}" />    
+                   [ngClass]="{'is-invalid': displayMessage['cityname']}" />    
             <span class="invalid-feedback">    
-              {{displayMessage.cityname}}    
+              {{displayMessage['cityname']}}    
             </span>    
           </div>    
         </div>    
